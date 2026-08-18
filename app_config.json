@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    "Time Tracker & Todo App",
+    "AI Interviewerr Application",
+    "RAG App for PDF reader & Questions",
+    "Offline Interview & Prep"
+  ],
+  "tags": [
+    "Personal Productivity",
+    "Portfolio Project",
+    "Interview Prep",
+    "Python Basics",
+    "Personal Tools"
+  ],
+  "labels": [
+    "Python - Basics",
+    "Portfolio Project",
+    "Agentic AI",
+    "ETL",
+    "DE",
+    "Langchain",
+    "Personal Productivity"
+  ]
+}
