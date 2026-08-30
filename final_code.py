@@ -28,6 +28,7 @@ Requires:  tkinter (ships with standard Python), matplotlib
 import csv
 import json
 import os
+import sys
 import uuid
 import calendar as _calendar_module
 from datetime import datetime, timedelta
@@ -42,11 +43,44 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 # ---------------------------------------------------------------------------
 # Paths / constants
 # ---------------------------------------------------------------------------
-APP_DIR = os.path.dirname(os.path.abspath(__file__))
+def get_app_dir():
+    """
+    Return a stable, writable folder for the app's data files.
+    Data survives EXE updates and works for different users.
+    """
+
+    data_dir = os.path.join(
+        os.path.expanduser("~"),
+        "TimeTrackerData"
+    )
+
+    try:
+        os.makedirs(data_dir, exist_ok=True)
+
+        test_path = os.path.join(data_dir, ".write_test")
+
+        with open(test_path, "w", encoding="utf-8") as f:
+            f.write("ok")
+
+        os.remove(test_path)
+
+        return data_dir
+
+    except Exception:
+        # Last-resort fallback
+        if getattr(sys, "frozen", False):
+            return os.path.dirname(sys.executable)
+
+        return os.path.dirname(os.path.abspath(__file__))
+
+
+APP_DIR = get_app_dir()
+
 CSV_PATH = os.path.join(APP_DIR, "time_log.csv")
 TASKS_CSV_PATH = os.path.join(APP_DIR, "tasks.csv")
 NOTES_CSV_PATH = os.path.join(APP_DIR, "notes.csv")
 CONFIG_PATH = os.path.join(APP_DIR, "app_config.json")
+
 
 CSV_HEADERS = ["ID", "Date", "Task", "Mode", "Start Time", "End Time",
                "Duration (HH:MM:SS)", "Duration (seconds)", "Tags"]
