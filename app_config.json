@@ -3,14 +3,17 @@
     "Time Tracker & Todo App",
     "AI Interviewerr Application",
     "RAG App for PDF reader & Questions",
-    "Offline Interview & Prep"
+    "Offline Interview & Prep",
+    "Personal Study",
+    "Relax"
   ],
   "tags": [
     "Personal Productivity",
     "Portfolio Project",
     "Interview Prep",
     "Python Basics",
-    "Personal Tools"
+    "Personal Tools",
+    "Relax"
   ],
   "labels": [
     "Python - Basics",
@@ -19,6 +22,7 @@
     "ETL",
     "DE",
     "Langchain",
-    "Personal Productivity"
+    "Personal Productivity",
+    "FAST API"
   ]
 }
