@@ -24,7 +24,7 @@ No Python needed — just download and run.
 |---|---|---|---|
 | v1.0.0 | 2026-08-30 | Initial release | [TimeTrack.exe](https://github.com/CodeCrafterX9/Time-Tracker-Application/releases/download/v1.0.0/DailyPlanner-v1.0.0.exe) |
 
-See the full [Releases page]([../../releases](https://github.com/CodeCrafterX9/Time-Tracker-Application/releases)) for release notes and older builds.
+See the full [Releases page]([../../releases](https://github.com/CodeCrafterX9/Time-Tracker-Application/releases) for release notes and older builds.
 
 ---
 
